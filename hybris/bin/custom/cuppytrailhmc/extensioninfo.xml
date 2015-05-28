@@ -26,7 +26,7 @@
       <webmodule jspcompile="false" webroot="/cuppytrailhmc"/>
       -->
 					
-	
+	  <hmcmodule extensionclassname="de.hybris.platform.cuppytrail.hmc.CuppytrailHMCExtension"/>
 
    </extension>
       

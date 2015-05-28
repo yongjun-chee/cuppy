@@ -7,6 +7,7 @@
 	<classpathentry kind="src" output="eclipsebin/web/classes" path="web/src"/>
 	<classpathentry kind="src" output="eclipsebin/classes" path="testsrc"/>
 	<classpathentry kind="src" output="eclipsebin/classes" path="gensrc"/>
+	<classpathentry kind="src" path="hmc/src"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/cuppytrail"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/hmc"/>
 	<classpathentry kind="output" path="eclipsebin/notused"/>
