@@ -80,5 +80,21 @@ public class DefaultStadiumDAOIntegrationTest extends ServicelayerTransactionalT
         assertEquals("Retrieved Stadium's capacity attribute incorrect",
                         STADIUM_CAPACITY, stadiumsByCode.get(0).getCapacity());
     }
+    
+    @Test
+    public void testFindStadiums_EmptyStringParam()
+    {
+        //calling findStadiumsByCode() with an empty String - returns no results
+        final List<StadiumModel> stadiums = stadiumDAO.findStadiumsByCode("");
+        assertTrue("No Stadium should be returned", stadiums.isEmpty());
+    }
+     
+     
+    @Test(expected = IllegalArgumentException.class)
+    public void testfindStadiums_NullParam()
+    {
+        //calling findStadiumByCode with null should throw an IllegalArgumentException
+        stadiumDAO.findStadiumsByCode(null); //method's return value not captured
+    }
  
 }
