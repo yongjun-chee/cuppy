@@ -8,5 +8,7 @@
 	<classpathentry kind="src" output="eclipsebin/classes" path="testsrc"/>
 	<classpathentry kind="src" output="eclipsebin/classes" path="gensrc"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/cuppy"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ldap"/>
+	<classpathentry kind="lib" path="/platform/lib/dbdriver/ojdbc6-11.2.0.3.jar"/>
 	<classpathentry kind="output" path="eclipsebin/notused"/>
 </classpath>
