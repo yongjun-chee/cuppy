@@ -5,6 +5,7 @@ import static org.junit.Assert.assertNotNull;
 
 import de.hybris.platform.cuppytrail.web.data.StadiumDataTO;
 import de.hybris.platform.cuppytrail.web.facades.StadiumFacade;
+import de.hybris.platform.cuppytrail.web.facades.impl.StadiumFacadeImpl;
 
 import java.util.List;
 
@@ -15,6 +16,12 @@ import org.junit.Test;
 public class FacadeTDDWithMockito
 {
 	private StadiumFacade stadiumFacade;
+
+	@Before
+	public void setUp()
+	{
+		stadiumFacade = new StadiumFacadeImpl();
+	}
 
 
 	@Test
