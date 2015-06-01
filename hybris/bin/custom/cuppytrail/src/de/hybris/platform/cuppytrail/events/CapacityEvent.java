@@ -1,9 +1,10 @@
 package de.hybris.platform.cuppytrail.events;
  
+import de.hybris.platform.servicelayer.event.ClusterAwareEvent;
 import de.hybris.platform.servicelayer.event.events.AbstractEvent;
  
  
-public class CapacityEvent extends AbstractEvent
+public class CapacityEvent extends AbstractEvent implements ClusterAwareEvent
 {
     private final Integer capacity;
     private final String code;
@@ -30,5 +31,11 @@ public class CapacityEvent extends AbstractEvent
     {
  
         return this.code + "(" + this.capacity + ")";
+    }
+
+    @Override
+    public boolean publish(final int sourceNodeId, final int targetNodeId)
+    {
+        return (sourceNodeId == targetNodeId);
     }
 }
