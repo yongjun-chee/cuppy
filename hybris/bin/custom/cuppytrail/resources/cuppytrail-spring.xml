@@ -51,7 +51,12 @@
 		<property name="modelService" ref="modelService" />
 		<property name="mailService" ref="mailService" />
 	</bean>
-						    
+
+	<bean id="playerVoidInterceptorMapping" class="de.hybris.platform.servicelayer.interceptor.impl.InterceptorMapping">
+        <property name="interceptor" ref="VoidInterceptor" />
+        <property name="typeCode" value="Player" />
+        <property name="replacedInterceptors" ref="playerConfirmedInterceptor"/>
+    </bean>							    
 
 	<!--
 	The hybris platform provides one single Spring application context for beans located at the jalo layer.
