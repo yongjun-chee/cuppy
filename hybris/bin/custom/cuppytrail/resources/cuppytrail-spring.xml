@@ -40,7 +40,18 @@
     	<property name="typeCode" value="Stadium" />
 	</bean>
 
-	<bean id="stadiumListener" class="de.hybris.platform.cuppytrail.events.StadiumEventListener"/>				    
+	<bean id="stadiumListener" class="de.hybris.platform.cuppytrail.events.StadiumEventListener"/>
+	
+	<bean id="registrationConfirmationActionJob" class="de.hybris.platform.cuppytrail.workflow.RegistrationConfirmationActionJob" >
+		<property name="modelService" ref="modelService" />
+		<property name="mailService" ref="mailService" />
+	</bean>
+     
+	<bean id="registrationDeclineActionJob" class="de.hybris.platform.cuppytrail.workflow.RegistrationDeclineActionJob" >
+		<property name="modelService" ref="modelService" />
+		<property name="mailService" ref="mailService" />
+	</bean>
+						    
 
 	<!--
 	The hybris platform provides one single Spring application context for beans located at the jalo layer.
