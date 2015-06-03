@@ -78,5 +78,27 @@
         	<y:preview urlQualifier="stadiumImage?.medias?.get(0)"/>
     	</y:base>
 	</context>
+	
+	<context component="create-wizard" type="Stadium">
+    	<wz:flow xmlns:wz="http://www.hybris.com/cockpitng/config/wizard-config" id="StadiumWizard" title="create.stadium.title">
+        	<wz:prepare id="stadiumPrepare">
+            	<wz:initialize property="newStadium" type="Stadium"/>
+        	</wz:prepare>
+        	<wz:step id="step1" label="create.stadium.general.label" sublabel="create.stadium.general.sublabel">
+            	<wz:content id="step1.content">
+                	<wz:property-list root="newStadium">
+                    	<wz:property qualifier="code"/>
+                    	<wz:property qualifier="capacity"/>
+                	</wz:property-list>
+            	</wz:content>
+            	<wz:navigation id="step1.navigation">
+                	<wz:cancel/>
+                	<wz:done visible="!#empty(newStadium.code)">
+                    	<wz:save property="newStadium"/>
+                	</wz:done>
+            	</wz:navigation>
+        	</wz:step>
+    	</wz:flow>
+	</context>
 
 </config>
