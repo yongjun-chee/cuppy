@@ -21,7 +21,8 @@
         <extension name="cuppytrailhmc" />
         <extension name="cuppytrailfrontend" />
         <extension name="cuppytrailcockpit" />
-              
+		<extension name="cuppytrailbackoffice" />
+		
                          
     </extensions>
 </hybrisconfig>
