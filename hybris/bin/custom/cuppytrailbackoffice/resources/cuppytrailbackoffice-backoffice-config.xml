@@ -8,4 +8,23 @@
         	</n:navigation-node>
     	</n:explorer-tree>
 	</context>
+	
+	<context type="Stadium" component="listview">
+    	<list:list-view xmlns:list="http://www.hybris.com/cockpitng/component/listView">
+        	<list:column qualifier="code"/>
+        	<list:column qualifier="StadiumType"/>
+	        <list:column qualifier="capacity"/>
+    	    <list:column qualifier="matches"/>
+        	<list:column qualifier="modifiedtime"/>
+    	</list:list-view>
+	</context>
+	
+	<context type="Match" component="base">
+    	<y:base xmlns:y="http://www.hybris.com/cockpit/config/hybris">
+        	<y:labels>
+            	<y:label>homeTeam?.name + ' - ' + guestTeam?.name</y:label>
+	        </y:labels>
+    	</y:base>
+	</context>
+
 </config>
