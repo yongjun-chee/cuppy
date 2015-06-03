@@ -26,5 +26,47 @@
 	        </y:labels>
     	</y:base>
 	</context>
+	
+	<context type="Stadium" component="simple-search">
+		<yss:simple-search xmlns:yss="http://www.hybris.com/cockpitng/config/simplesearch">
+			<yss:field name="code"/>
+			<yss:sort-field name="capacity" asc="true"/>
+		</yss:simple-search>
+	</context>
+	
+	<context type="Stadium" component="advanced-search">
+	    <as:advanced-search xmlns:as="http://www.hybris.com/cockpitng/config/advancedsearch" connection-operator="AND">
+    	    <as:field-list>
+        	    <as:field name="code" operator="contains" selected="true"/>
+            	<as:field name="StadiumType" selected="true"/>
+            	<as:field editor="java.lang.Long" name="pk" operator="equal" selected="false" sortable="false"/>
+        	</as:field-list>
+            <as:sort-field name="code" asc="false" />
+    	</as:advanced-search>
+	</context>
+	
+	<context component="editor-area" type="Stadium">
+    	<editorArea:editorArea xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">
+        	<editorArea:tab name="essentials">
+            	<editorArea:section name="essentials">
+                	<editorArea:attribute qualifier="code"/>
+                	<editorArea:attribute qualifier="StadiumType"/>
+            	</editorArea:section>
+            	<editorArea:section name="data">
+                	<editorArea:attribute qualifier="capacity"/>
+                	<editorArea:attribute qualifier="matches"/>
+            	</editorArea:section>
+            	<editorArea:section name="media">
+                	<editorArea:attribute qualifier="stadiumImage"/>
+            	</editorArea:section>
+        	</editorArea:tab>
+        	<editorArea:tab name="dates">
+            	<editorArea:section name="dates">
+                	<editorArea:attribute qualifier="creationtime"/>
+                	<editorArea:attribute qualifier="modifiedtime"/>
+            	</editorArea:section>
+        	</editorArea:tab>
+    	</editorArea:editorArea>
+	</context>
 
 </config>
