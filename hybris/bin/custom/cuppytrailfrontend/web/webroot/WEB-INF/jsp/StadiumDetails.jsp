@@ -4,7 +4,7 @@
     <title>Stadium Details</title>
     <body>
         <h1>Stadium Details</h1>
- 
+  
         Stadium Details for ${stadium.name}<br><br>
             Capacity: ${stadium.capacity}<br>
             Matches:<br>
@@ -13,6 +13,7 @@
                 <li>${match.matchSummaryFormatted}</li>
               </c:forEach>
             </ul>
+            <img src="${stadium.imageUrl}"/> <br/>
         <a href="../stadiums">Back to Stadium Listing</a>
     </body>
 </html>
