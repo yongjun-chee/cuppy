@@ -11,6 +11,7 @@
 	
 	<context type="Stadium" component="listview">
     	<list:list-view xmlns:list="http://www.hybris.com/cockpitng/component/listView">
+    		<list:column spring-bean="previewListCellRenderer" width="26px"/>   
         	<list:column qualifier="code"/>
         	<list:column qualifier="StadiumType"/>
 	        <list:column qualifier="capacity"/>
@@ -67,6 +68,15 @@
             	</editorArea:section>
         	</editorArea:tab>
     	</editorArea:editorArea>
+	</context>
+	
+	<context type="Stadium" component="base">
+	    <y:base xmlns:y="http://www.hybris.com/cockpit/config/hybris">
+    	    <y:labels>
+        	    <y:label>code</y:label>
+        	</y:labels>
+        	<y:preview urlQualifier="stadiumImage?.medias?.get(0)"/>
+    	</y:base>
 	</context>
 
 </config>
