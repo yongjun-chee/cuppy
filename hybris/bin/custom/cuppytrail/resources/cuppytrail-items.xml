@@ -88,11 +88,11 @@
     		</custom-properties>
     		<attributes>
         		<attribute qualifier="id" type="java.lang.String">
-            		<modifiers initial="true" optional="false" write="false"/>
+            		<modifiers initial="true" optional="false" write="true"/>
             		<persistence type="property"/>
             	</attribute>
         		<attribute qualifier="catalogVersion" type="CatalogVersion">
-            		<modifiers initial="true" optional="false" write="false"/>
+            		<modifiers initial="true" optional="false" write="true"/>
             		<persistence type="property"/>
         		</attribute>
     		</attributes>
