@@ -59,6 +59,8 @@
     </bean>							    
 	
     <bean id="playerService" class="de.hybris.platform.cuppytrail.impl.CuppytrailPlayerService" />
+    
+    <bean id="matchService" class="de.hybris.platform.cuppytrail.CuppytrailMatchService"/>	
 	
 	<!--
 	The hybris platform provides one single Spring application context for beans located at the jalo layer.
