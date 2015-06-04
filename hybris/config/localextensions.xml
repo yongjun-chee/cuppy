@@ -7,6 +7,8 @@
         -->             
                  
         <path dir="${HYBRIS_BIN_DIR}" />
+		<extension name="platformwebservices" />
+        	        
                                              
         <!-- ext-platform -->
         <extension name="admincockpit" />
